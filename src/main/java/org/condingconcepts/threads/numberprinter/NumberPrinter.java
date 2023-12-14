@@ -7,6 +7,13 @@ public class NumberPrinter implements Runnable {
     }
     @Override
     public void run() {
+
+        // interrupt the execution of printing for 5000ms
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
         System.out.println(numberToPrint);
     }
 }
